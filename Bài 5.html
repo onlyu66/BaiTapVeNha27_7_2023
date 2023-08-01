@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 5</title>
+  </head>
+  <body>
+    <script>
+      function sortTD(nums) {
+        // for (let i = 0; i < nums.lenght - 1; i++) {
+        //   for (let j = i + 1; j < nums.lenght; j++) {
+        //     if (nums[i] > nums[j]) {
+        //       let temp = nums[i];
+        //       nums[i] = nums[j];
+        //       nums[j] = temp;
+        //     }
+        //   }
+        // }
+        nums.sort((a, b) => a - b);
+        alert(`Mảng sau khi sắp xếp tăng dần là: ${nums.join(" ")}`);
+      }
+      let nums = prompt(`Nhập mảng số: `)
+        .split(",")
+        .map((item) => Number(item.trim()));
+      sortTD(nums);
+    </script>
+  </body>
+</html>

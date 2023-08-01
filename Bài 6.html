@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 6</title>
+  </head>
+  <body>
+    <script>
+      function ktSnt(a) {
+        let count = 0;
+        for (let i = 1; i <= a; i++) {
+          if (a % i === 0) {
+            count++;
+          }
+        }
+        if (count === 2) return true;
+        else return false;
+      }
+      function arrSnt(arr) {
+        // let result = [];
+        // for (let i = 0; i < arr.lenght; i++) {
+        //   if (ktSnt(arr[i])) {
+        //     result = arr[i];
+        //   }
+        // }
+        // return result;
+        return arr.filter(ktSnt);
+      }
+      let arr = prompt(`Nhập mảng số: `)
+        .split(",")
+        .map((item) => Number(item.trim()));
+      alert(`Các số nguyên tố có trong mảng là: ${arrSnt(arr).join(" ")}`);
+    </script>
+  </body>
+</html>
